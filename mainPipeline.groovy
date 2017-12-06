@@ -3,16 +3,13 @@ library identifier: 'openshift-pipeline@master', retriever: modernSCM([$class: '
    remote: 'https://github.com/domenicbove/openshift-pipeline.git']) _
 
 mainPipeline {
-    gitRepoUrl = "https://bitbucket.mfoundry.net/scm/~jordan.sztanyo/mbank-zelle.git"
-    microserviceSubmodule = "mbank-zelle-service"
-    templateFileName = "mplat-dsm-deploy-template.yml"
+    gitRepoUrl = "https://github.com/domenicbove/simple-server.git"
+    microservice = "simple-server"
+    templateGitRepoUrl = "https://github.com/domenicbove/openshift-templates.git"
     templateGitTag = "master"
-    hipchatRooms = "Openshift-testjenkinsalerts"
-    microservice = "mbank-zelle"
-    mavenCredentialsId = "SRV_JENKINS_REPO_RO"
-    fortifyCredentialsId ="SRV_FORTIFY_SCC"
-    artifactoryCredentialsId = "32909818-7980-4ad3-bd37-65868e55cb84"
-    artifactoryRepoBaseURL = 'https://repository.fismobile.com/artifactory'
-    artifactoryRepoName = 'mobile-archives-1'
-    runStressTests = false
+    ocpUrl = "master1.fismobile.net"
+    ocpAuthTokenCredentialId ="OCP_SA_CICD_JENKINS"
+    buildProject = "demo-build"
+    testProject = "demo-test"
+    prodProject = "demo-prod"
 }
