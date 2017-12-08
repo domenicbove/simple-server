@@ -20,7 +20,7 @@ class SimpleServerController {
     @RequestMapping("/helloUser")
     public String helloUser(){
 	     System.out.println("Inside helloUser()");
-	     return "Hello user!!! : " + new Date() + "\n";
+	     return "HAPPY HOLIDAYS GREEN user!!! : " + new Date() + "\n";
     }
 
 }
